@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "ES2015",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "paths": {
+      "@constants": ["src/index.constants.ts"],
+      "@types": ["src/index.types.ts"],
+      "@modules/*": ["src/Modules/*"],
+      "@root/*": ["src/*"]
+    }
+  },
+  "exclude": [
+    "node_modules/*",
+    "**/node_modules/*"
+  ]
+}
