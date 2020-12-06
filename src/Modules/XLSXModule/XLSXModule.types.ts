@@ -8,6 +8,8 @@ export interface IXLSXFile {
 export  interface IWorkbook {
   sheet: (sheetName: string) => ISheet;
   toFileAsync: (fileName: string) => Promise<any>;
+  deleteSheet: (sheetName: string) => void;
+  addSheet: (sheetName: string) => void;
 }
 
 export  interface ISheet {

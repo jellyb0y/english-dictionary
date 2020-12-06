@@ -26,7 +26,7 @@ XLSXFile
 
         return parse({ word: word as string })
           .then((parsedData: IParseData) => (Dictionary[word] = parsedData))
-          .catch(console.log);
+          .catch(() => (Dictionary[word] = {}));
       });
 
     return Promise.all(promises);
@@ -44,8 +44,8 @@ XLSXFile
           examples
         } = data;
 
-        returnedData.push(wordType);
-        returnedData.push(transcription);
+        returnedData.push(wordType || '');
+        returnedData.push(transcription || '');
         returnedData.push(translations.join(' \r\n '));
         returnedData.push(meanings.join(' \r\n '));
         returnedData.push(examples.join(' \r\n '));
